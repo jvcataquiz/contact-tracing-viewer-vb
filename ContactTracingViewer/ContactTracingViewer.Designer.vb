@@ -23,7 +23,7 @@ Partial Class ContactTracingViewer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.ButtonSearch = New System.Windows.Forms.Button()
+        Me.ButtonOpen = New System.Windows.Forms.Button()
         Me.ButtonAdmin = New System.Windows.Forms.Button()
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.LabelFullname = New System.Windows.Forms.Label()
@@ -31,29 +31,46 @@ Partial Class ContactTracingViewer
         Me.LabelError = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LabelTime = New System.Windows.Forms.Label()
+        Me.LabelNAME = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'ButtonSearch
+        'ButtonOpen
         '
-        Me.ButtonSearch.Location = New System.Drawing.Point(169, 123)
-        Me.ButtonSearch.Name = "ButtonSearch"
-        Me.ButtonSearch.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonSearch.TabIndex = 1
-        Me.ButtonSearch.Text = "SEARCH"
-        Me.ButtonSearch.UseVisualStyleBackColor = True
+        Me.ButtonOpen.BackColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.ButtonOpen.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonOpen.FlatAppearance.BorderSize = 0
+        Me.ButtonOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonOpen.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonOpen.ForeColor = System.Drawing.Color.LightYellow
+        Me.ButtonOpen.Location = New System.Drawing.Point(318, 110)
+        Me.ButtonOpen.Name = "ButtonOpen"
+        Me.ButtonOpen.Size = New System.Drawing.Size(57, 27)
+        Me.ButtonOpen.TabIndex = 1
+        Me.ButtonOpen.Text = "OPEN"
+        Me.ButtonOpen.UseVisualStyleBackColor = False
+        Me.ButtonOpen.Visible = False
         '
         'ButtonAdmin
         '
-        Me.ButtonAdmin.Location = New System.Drawing.Point(39, 166)
+        Me.ButtonAdmin.BackColor = System.Drawing.Color.Yellow
+        Me.ButtonAdmin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonAdmin.FlatAppearance.BorderSize = 0
+        Me.ButtonAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonAdmin.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonAdmin.ForeColor = System.Drawing.Color.Black
+        Me.ButtonAdmin.Location = New System.Drawing.Point(39, 159)
         Me.ButtonAdmin.Name = "ButtonAdmin"
-        Me.ButtonAdmin.Size = New System.Drawing.Size(69, 23)
+        Me.ButtonAdmin.Size = New System.Drawing.Size(60, 31)
         Me.ButtonAdmin.TabIndex = 2
         Me.ButtonAdmin.TabStop = False
         Me.ButtonAdmin.Text = "ADMIN"
-        Me.ButtonAdmin.UseVisualStyleBackColor = True
+        Me.ButtonAdmin.UseVisualStyleBackColor = False
         '
         'TextBoxSearch
         '
+        Me.TextBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.TextBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem
+        Me.TextBoxSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBoxSearch.Location = New System.Drawing.Point(39, 75)
         Me.TextBoxSearch.Name = "TextBoxSearch"
         Me.TextBoxSearch.Size = New System.Drawing.Size(336, 20)
@@ -62,18 +79,22 @@ Partial Class ContactTracingViewer
         'LabelFullname
         '
         Me.LabelFullname.AutoSize = True
-        Me.LabelFullname.Location = New System.Drawing.Point(36, 52)
+        Me.LabelFullname.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFullname.ForeColor = System.Drawing.Color.Yellow
+        Me.LabelFullname.Location = New System.Drawing.Point(36, 59)
         Me.LabelFullname.Name = "LabelFullname"
-        Me.LabelFullname.Size = New System.Drawing.Size(67, 13)
+        Me.LabelFullname.Size = New System.Drawing.Size(84, 15)
         Me.LabelFullname.TabIndex = 3
         Me.LabelFullname.Text = "FULLNAME:"
         '
         'LabelDate
         '
         Me.LabelDate.AutoSize = True
-        Me.LabelDate.Location = New System.Drawing.Point(12, 9)
+        Me.LabelDate.Font = New System.Drawing.Font("MS Reference Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.LabelDate.ForeColor = System.Drawing.Color.LightGray
+        Me.LabelDate.Location = New System.Drawing.Point(13, 8)
         Me.LabelDate.Name = "LabelDate"
-        Me.LabelDate.Size = New System.Drawing.Size(30, 13)
+        Me.LabelDate.Size = New System.Drawing.Size(38, 15)
         Me.LabelDate.TabIndex = 4
         Me.LabelDate.Text = "Date"
         '
@@ -96,33 +117,49 @@ Partial Class ContactTracingViewer
         'LabelTime
         '
         Me.LabelTime.AutoSize = True
-        Me.LabelTime.Location = New System.Drawing.Point(355, 9)
+        Me.LabelTime.Font = New System.Drawing.Font("MS Reference Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTime.ForeColor = System.Drawing.Color.LightGray
+        Me.LabelTime.Location = New System.Drawing.Point(306, 8)
         Me.LabelTime.Name = "LabelTime"
-        Me.LabelTime.Size = New System.Drawing.Size(30, 13)
+        Me.LabelTime.Size = New System.Drawing.Size(39, 15)
         Me.LabelTime.TabIndex = 6
         Me.LabelTime.Text = "Time"
+        '
+        'LabelNAME
+        '
+        Me.LabelNAME.AutoSize = True
+        Me.LabelNAME.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNAME.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelNAME.Location = New System.Drawing.Point(116, 58)
+        Me.LabelNAME.Name = "LabelNAME"
+        Me.LabelNAME.Size = New System.Drawing.Size(195, 15)
+        Me.LabelNAME.TabIndex = 7
+        Me.LabelNAME.Text = "(SURNAME, FIRSTNAME MI.)"
         '
         'ContactTracingViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(416, 202)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(416, 216)
+        Me.Controls.Add(Me.LabelNAME)
         Me.Controls.Add(Me.LabelTime)
         Me.Controls.Add(Me.LabelError)
         Me.Controls.Add(Me.LabelDate)
         Me.Controls.Add(Me.LabelFullname)
         Me.Controls.Add(Me.TextBoxSearch)
         Me.Controls.Add(Me.ButtonAdmin)
-        Me.Controls.Add(Me.ButtonSearch)
+        Me.Controls.Add(Me.ButtonOpen)
         Me.MaximizeBox = False
         Me.Name = "ContactTracingViewer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ContactTracingViewer"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ButtonSearch As Button
+    Friend WithEvents ButtonOpen As Button
     Friend WithEvents ButtonAdmin As Button
     Friend WithEvents TextBoxSearch As TextBox
     Friend WithEvents LabelFullname As Label
@@ -130,4 +167,5 @@ Partial Class ContactTracingViewer
     Friend WithEvents LabelError As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents LabelTime As Label
+    Friend WithEvents LabelNAME As Label
 End Class

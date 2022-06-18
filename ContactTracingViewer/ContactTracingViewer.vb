@@ -3,21 +3,23 @@
 Public Class ContactTracingViewer
     Dim filereader As System.IO.StreamReader
     Dim checker As String
-    Dim flag As Boolean = False
+    Dim date_Now() As String
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        date_Now = Split(DateTime.Now.ToString())
+        LabelDate.Text = date_Now(0)
+        LabelTime.Text = date_Now(1) & " " & date_Now(2)
 
-
-
-        'This if else statement is for Email to validate the input of the user
         If TextBoxSearch.Text.Equals("") Then
             LabelError.Visible = False
             LabelError.Text = ""
         Else
             LabelError.Visible = True
+            LabelError.ForeColor = System.Drawing.Color.Red
             LabelError.Text = "No Data Found!!!"
         End If
-        MyData()
 
+        MyData()
+        mybtn()
     End Sub
 
     Sub MyData()
@@ -27,17 +29,24 @@ Public Class ContactTracingViewer
             'if the checker cointains a fullname of the user this code will count how many data will found
             If checker.Contains(TextBoxSearch.Text) And checker.Equals("Fullname:  " & TextBoxSearch.Text) Then
                 'if checker detect a data in the textfile a change the value of flag
-                flag = True
+
                 LabelError.Text = "DATA FOUND!!"
-                LabelError.Visible = True
+                LabelError.ForeColor = System.Drawing.Color.Green
+
 
             End If
         End While
     End Sub
 
-    Private Sub ButtonSearch_Click(sender As Object, e As EventArgs) Handles ButtonSearch.Click
-        If File.Exists("contacttracing.txt") Then
-            MessageBox.Show("Yes")
+    Sub mybtn()
+        If LabelError.Text.Equals("DATA FOUND!!") Then
+            ButtonOpen.Visible = True
+        Else
+            ButtonOpen.Visible = False
         End If
+    End Sub
+
+    Private Sub ContactTracingViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        mybtn()
     End Sub
 End Class
