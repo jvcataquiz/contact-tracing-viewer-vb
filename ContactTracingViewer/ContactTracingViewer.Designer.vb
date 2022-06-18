@@ -39,6 +39,7 @@ Partial Class ContactTracingViewer
         Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.ButtonLogin = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.RichTextBoxDisplay = New System.Windows.Forms.RichTextBox()
         Me.PanelAdmin.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,7 +67,7 @@ Partial Class ContactTracingViewer
         Me.ButtonAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonAdmin.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonAdmin.ForeColor = System.Drawing.Color.Black
-        Me.ButtonAdmin.Location = New System.Drawing.Point(39, 195)
+        Me.ButtonAdmin.Location = New System.Drawing.Point(39, 135)
         Me.ButtonAdmin.Name = "ButtonAdmin"
         Me.ButtonAdmin.Size = New System.Drawing.Size(60, 31)
         Me.ButtonAdmin.TabIndex = 2
@@ -218,12 +219,24 @@ Partial Class ContactTracingViewer
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "ADMIN"
         '
+        'RichTextBoxDisplay
+        '
+        Me.RichTextBoxDisplay.Dock = System.Windows.Forms.DockStyle.Right
+        Me.RichTextBoxDisplay.Location = New System.Drawing.Point(45, 0)
+        Me.RichTextBoxDisplay.Name = "RichTextBoxDisplay"
+        Me.RichTextBoxDisplay.ReadOnly = True
+        Me.RichTextBoxDisplay.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.RichTextBoxDisplay.Size = New System.Drawing.Size(369, 200)
+        Me.RichTextBoxDisplay.TabIndex = 9
+        Me.RichTextBoxDisplay.Text = ""
+        Me.RichTextBoxDisplay.Visible = False
+        '
         'ContactTracingViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(416, 238)
+        Me.ClientSize = New System.Drawing.Size(414, 200)
         Me.Controls.Add(Me.PanelAdmin)
         Me.Controls.Add(Me.LabelNAME)
         Me.Controls.Add(Me.LabelTime)
@@ -233,6 +246,7 @@ Partial Class ContactTracingViewer
         Me.Controls.Add(Me.TextBoxSearch)
         Me.Controls.Add(Me.ButtonAdmin)
         Me.Controls.Add(Me.ButtonOpen)
+        Me.Controls.Add(Me.RichTextBoxDisplay)
         Me.MaximizeBox = False
         Me.Name = "ContactTracingViewer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -260,4 +274,5 @@ Partial Class ContactTracingViewer
     Friend WithEvents LabelPassword As Label
     Friend WithEvents LabelUsername As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents RichTextBoxDisplay As RichTextBox
 End Class
