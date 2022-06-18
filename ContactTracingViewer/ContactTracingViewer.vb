@@ -49,4 +49,18 @@ Public Class ContactTracingViewer
     Private Sub ContactTracingViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mybtn()
     End Sub
+
+    Private Sub ButtonAdmin_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ButtonAdmin_Click_1(sender As Object, e As EventArgs) Handles ButtonAdmin.Click
+        If ButtonAdmin.Text.Equals("ADMIN") Then
+            PanelAdmin.Visible = True
+            ButtonAdmin.Text = "USER"
+        Else
+            PanelAdmin.Visible = False
+            ButtonAdmin.Text = "ADMIN"
+        End If
+    End Sub
 End Class

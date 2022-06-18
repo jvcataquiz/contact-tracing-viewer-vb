@@ -32,6 +32,14 @@ Partial Class ContactTracingViewer
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LabelTime = New System.Windows.Forms.Label()
         Me.LabelNAME = New System.Windows.Forms.Label()
+        Me.PanelAdmin = New System.Windows.Forms.Panel()
+        Me.LabelUsername = New System.Windows.Forms.Label()
+        Me.LabelPassword = New System.Windows.Forms.Label()
+        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+        Me.ButtonLogin = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PanelAdmin.SuspendLayout()
         Me.SuspendLayout()
         '
         'ButtonOpen
@@ -58,7 +66,7 @@ Partial Class ContactTracingViewer
         Me.ButtonAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonAdmin.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonAdmin.ForeColor = System.Drawing.Color.Black
-        Me.ButtonAdmin.Location = New System.Drawing.Point(39, 159)
+        Me.ButtonAdmin.Location = New System.Drawing.Point(39, 195)
         Me.ButtonAdmin.Name = "ButtonAdmin"
         Me.ButtonAdmin.Size = New System.Drawing.Size(60, 31)
         Me.ButtonAdmin.TabIndex = 2
@@ -136,12 +144,87 @@ Partial Class ContactTracingViewer
         Me.LabelNAME.TabIndex = 7
         Me.LabelNAME.Text = "(SURNAME, FIRSTNAME MI.)"
         '
+        'PanelAdmin
+        '
+        Me.PanelAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.PanelAdmin.Controls.Add(Me.Label1)
+        Me.PanelAdmin.Controls.Add(Me.ButtonLogin)
+        Me.PanelAdmin.Controls.Add(Me.TextBoxPassword)
+        Me.PanelAdmin.Controls.Add(Me.TextBoxUsername)
+        Me.PanelAdmin.Controls.Add(Me.LabelPassword)
+        Me.PanelAdmin.Controls.Add(Me.LabelUsername)
+        Me.PanelAdmin.Location = New System.Drawing.Point(39, 42)
+        Me.PanelAdmin.Name = "PanelAdmin"
+        Me.PanelAdmin.Size = New System.Drawing.Size(345, 147)
+        Me.PanelAdmin.TabIndex = 8
+        Me.PanelAdmin.Visible = False
+        '
+        'LabelUsername
+        '
+        Me.LabelUsername.AutoSize = True
+        Me.LabelUsername.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelUsername.Location = New System.Drawing.Point(20, 16)
+        Me.LabelUsername.Name = "LabelUsername"
+        Me.LabelUsername.Size = New System.Drawing.Size(58, 13)
+        Me.LabelUsername.TabIndex = 0
+        Me.LabelUsername.Text = "Username:"
+        '
+        'LabelPassword
+        '
+        Me.LabelPassword.AutoSize = True
+        Me.LabelPassword.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelPassword.Location = New System.Drawing.Point(23, 58)
+        Me.LabelPassword.Name = "LabelPassword"
+        Me.LabelPassword.Size = New System.Drawing.Size(56, 13)
+        Me.LabelPassword.TabIndex = 1
+        Me.LabelPassword.Text = "Password:"
+        '
+        'TextBoxUsername
+        '
+        Me.TextBoxUsername.Location = New System.Drawing.Point(80, 33)
+        Me.TextBoxUsername.Name = "TextBoxUsername"
+        Me.TextBoxUsername.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxUsername.TabIndex = 2
+        '
+        'TextBoxPassword
+        '
+        Me.TextBoxPassword.Location = New System.Drawing.Point(80, 76)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxPassword.TabIndex = 3
+        '
+        'ButtonLogin
+        '
+        Me.ButtonLogin.BackColor = System.Drawing.Color.Black
+        Me.ButtonLogin.FlatAppearance.BorderSize = 0
+        Me.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonLogin.ForeColor = System.Drawing.Color.Yellow
+        Me.ButtonLogin.Location = New System.Drawing.Point(149, 107)
+        Me.ButtonLogin.Name = "ButtonLogin"
+        Me.ButtonLogin.Size = New System.Drawing.Size(59, 33)
+        Me.ButtonLogin.TabIndex = 4
+        Me.ButtonLogin.Text = "Login"
+        Me.ButtonLogin.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Silver
+        Me.Label1.Location = New System.Drawing.Point(295, 5)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(47, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "ADMIN"
+        '
         'ContactTracingViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(416, 216)
+        Me.ClientSize = New System.Drawing.Size(416, 238)
+        Me.Controls.Add(Me.PanelAdmin)
         Me.Controls.Add(Me.LabelNAME)
         Me.Controls.Add(Me.LabelTime)
         Me.Controls.Add(Me.LabelError)
@@ -152,8 +235,9 @@ Partial Class ContactTracingViewer
         Me.Controls.Add(Me.ButtonOpen)
         Me.MaximizeBox = False
         Me.Name = "ContactTracingViewer"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ContactTracingViewer"
+        Me.PanelAdmin.ResumeLayout(False)
+        Me.PanelAdmin.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -168,4 +252,11 @@ Partial Class ContactTracingViewer
     Friend WithEvents Timer1 As Timer
     Friend WithEvents LabelTime As Label
     Friend WithEvents LabelNAME As Label
+    Friend WithEvents PanelAdmin As Panel
+    Friend WithEvents ButtonLogin As Button
+    Friend WithEvents TextBoxPassword As TextBox
+    Friend WithEvents TextBoxUsername As TextBox
+    Friend WithEvents LabelPassword As Label
+    Friend WithEvents LabelUsername As Label
+    Friend WithEvents Label1 As Label
 End Class
