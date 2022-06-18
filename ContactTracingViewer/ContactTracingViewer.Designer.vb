@@ -22,15 +22,19 @@ Partial Class ContactTracingViewer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ButtonSearch = New System.Windows.Forms.Button()
         Me.ButtonAdmin = New System.Windows.Forms.Button()
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.LabelFullname = New System.Windows.Forms.Label()
+        Me.LabelDate = New System.Windows.Forms.Label()
+        Me.LabelError = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'ButtonSearch
         '
-        Me.ButtonSearch.Location = New System.Drawing.Point(170, 108)
+        Me.ButtonSearch.Location = New System.Drawing.Point(169, 123)
         Me.ButtonSearch.Name = "ButtonSearch"
         Me.ButtonSearch.Size = New System.Drawing.Size(75, 23)
         Me.ButtonSearch.TabIndex = 1
@@ -63,11 +67,38 @@ Partial Class ContactTracingViewer
         Me.LabelFullname.TabIndex = 3
         Me.LabelFullname.Text = "FULLNAME:"
         '
+        'LabelDate
+        '
+        Me.LabelDate.AutoSize = True
+        Me.LabelDate.Location = New System.Drawing.Point(359, 20)
+        Me.LabelDate.Name = "LabelDate"
+        Me.LabelDate.Size = New System.Drawing.Size(30, 13)
+        Me.LabelDate.TabIndex = 4
+        Me.LabelDate.Text = "Date"
+        '
+        'LabelError
+        '
+        Me.LabelError.AutoSize = True
+        Me.LabelError.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelError.ForeColor = System.Drawing.Color.Red
+        Me.LabelError.Location = New System.Drawing.Point(38, 98)
+        Me.LabelError.Name = "LabelError"
+        Me.LabelError.Size = New System.Drawing.Size(105, 13)
+        Me.LabelError.TabIndex = 5
+        Me.LabelError.Text = "No Data Found!!!"
+        Me.LabelError.Visible = False
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'ContactTracingViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(416, 214)
+        Me.ClientSize = New System.Drawing.Size(416, 202)
+        Me.Controls.Add(Me.LabelError)
+        Me.Controls.Add(Me.LabelDate)
         Me.Controls.Add(Me.LabelFullname)
         Me.Controls.Add(Me.TextBoxSearch)
         Me.Controls.Add(Me.ButtonAdmin)
@@ -84,4 +115,7 @@ Partial Class ContactTracingViewer
     Friend WithEvents ButtonAdmin As Button
     Friend WithEvents TextBoxSearch As TextBox
     Friend WithEvents LabelFullname As Label
+    Friend WithEvents LabelDate As Label
+    Friend WithEvents LabelError As Label
+    Friend WithEvents Timer1 As Timer
 End Class
