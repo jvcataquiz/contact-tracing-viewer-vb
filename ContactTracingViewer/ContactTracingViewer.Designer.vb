@@ -22,56 +22,56 @@ Partial Class ContactTracingViewer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ButtonSearch = New System.Windows.Forms.Button()
+        Me.ButtonAdmin = New System.Windows.Forms.Button()
+        Me.TextBoxSearch = New System.Windows.Forms.TextBox()
+        Me.LabelFullname = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Button1
+        'ButtonSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(170, 108)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "SEARCH"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonSearch.Location = New System.Drawing.Point(170, 108)
+        Me.ButtonSearch.Name = "ButtonSearch"
+        Me.ButtonSearch.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonSearch.TabIndex = 1
+        Me.ButtonSearch.Text = "SEARCH"
+        Me.ButtonSearch.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ButtonAdmin
         '
-        Me.Button2.Location = New System.Drawing.Point(39, 189)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(69, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.TabStop = False
-        Me.Button2.Text = "ADMIN"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ButtonAdmin.Location = New System.Drawing.Point(39, 166)
+        Me.ButtonAdmin.Name = "ButtonAdmin"
+        Me.ButtonAdmin.Size = New System.Drawing.Size(69, 23)
+        Me.ButtonAdmin.TabIndex = 2
+        Me.ButtonAdmin.TabStop = False
+        Me.ButtonAdmin.Text = "ADMIN"
+        Me.ButtonAdmin.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'TextBoxSearch
         '
-        Me.TextBox1.Location = New System.Drawing.Point(39, 75)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(336, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.TextBoxSearch.Location = New System.Drawing.Point(39, 75)
+        Me.TextBoxSearch.Name = "TextBoxSearch"
+        Me.TextBoxSearch.Size = New System.Drawing.Size(336, 20)
+        Me.TextBoxSearch.TabIndex = 0
         '
-        'Label1
+        'LabelFullname
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(36, 52)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "FULLNAME:"
+        Me.LabelFullname.AutoSize = True
+        Me.LabelFullname.Location = New System.Drawing.Point(36, 52)
+        Me.LabelFullname.Name = "LabelFullname"
+        Me.LabelFullname.Size = New System.Drawing.Size(67, 13)
+        Me.LabelFullname.TabIndex = 3
+        Me.LabelFullname.Text = "FULLNAME:"
         '
         'ContactTracingViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(416, 234)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(416, 214)
+        Me.Controls.Add(Me.LabelFullname)
+        Me.Controls.Add(Me.TextBoxSearch)
+        Me.Controls.Add(Me.ButtonAdmin)
+        Me.Controls.Add(Me.ButtonSearch)
         Me.MaximizeBox = False
         Me.Name = "ContactTracingViewer"
         Me.Text = "ContactTracingViewer"
@@ -80,8 +80,8 @@ Partial Class ContactTracingViewer
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents ButtonSearch As Button
+    Friend WithEvents ButtonAdmin As Button
+    Friend WithEvents TextBoxSearch As TextBox
+    Friend WithEvents LabelFullname As Label
 End Class
