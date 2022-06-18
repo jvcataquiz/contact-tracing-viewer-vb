@@ -235,6 +235,7 @@ Partial Class ContactTracingViewer
         Me.Controls.Add(Me.ButtonOpen)
         Me.MaximizeBox = False
         Me.Name = "ContactTracingViewer"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ContactTracingViewer"
         Me.PanelAdmin.ResumeLayout(False)
         Me.PanelAdmin.PerformLayout()

@@ -1,5 +1,5 @@
 ﻿Imports System.IO
-
+Imports System.Text
 Public Class ContactTracingViewer
     Dim filereader As System.IO.StreamReader
     Dim checker As String
@@ -47,7 +47,7 @@ Public Class ContactTracingViewer
     End Sub
 
     Private Sub ContactTracingViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mybtn()
+
     End Sub
 
     Private Sub ButtonAdmin_Click(sender As Object, e As EventArgs)
@@ -63,4 +63,28 @@ Public Class ContactTracingViewer
             ButtonAdmin.Text = "ADMIN"
         End If
     End Sub
+
+    Private Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
+        Dim stringPass As String
+        stringPass = MyEncrypt(TextBoxPassword.Text)
+
+
+        If TextBoxUsername.Text.Equals("Admin") And stringPass.Equals("YWRtaW4xMDE=") Then
+            MessageBox.Show("Welcome Admin")
+        Else
+            MessageBox.Show("Wrong Username / Password")
+        End If
+
+
+    End Sub
+    Function MyEncrypt(Encrytpt As String) As String
+        Dim msg As String = String.Empty
+        Dim encode As Byte() = New Byte(Encrytpt.Length - 1) {}
+        encode = Encoding.UTF8.GetBytes(Encrytpt)
+        msg = Convert.ToBase64String(encode)
+
+        Return msg
+    End Function
+
+
 End Class
