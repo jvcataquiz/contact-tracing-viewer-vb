@@ -11,3 +11,4 @@ C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\Contact
 C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.exe
 C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.xml
 C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.pdb
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.Admin.resources

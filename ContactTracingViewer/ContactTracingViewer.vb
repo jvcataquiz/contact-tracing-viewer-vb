@@ -21,7 +21,7 @@ Public Class ContactTracingViewer
         MyData()
         mybtn()
     End Sub
-    Sub MyData()
+    Public Sub MyData()
         filereader = My.Computer.FileSystem.OpenTextFileReader("contacttracing.txt")
         While Not filereader.EndOfStream
             checker = filereader.ReadLine()
@@ -72,6 +72,9 @@ Public Class ContactTracingViewer
         stringPass = MyEncrypt(TextBoxPassword.Text)
         If TextBoxUsername.Text.Equals("Admin") And stringPass.Equals("YWRtaW4xMDE=") Then
             MessageBox.Show("Welcome Admin")
+            Dim jumpAdmin As New Admin
+            Me.Hide()
+            jumpAdmin.Show()
         Else
             MessageBox.Show("Wrong Username / Password")
         End If
