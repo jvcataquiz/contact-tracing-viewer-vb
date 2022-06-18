@@ -1,0 +1,13 @@
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.vbproj.AssemblyReference.cache
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.ContactTracingViewer.resources
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.Resources.resources
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.vbproj.GenerateResource.cache
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.vbproj.CoreCompileInputs.cache
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\bin\Debug\ContactTracingViewer.exe.config
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\bin\Debug\ContactTracingViewer.exe
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\bin\Debug\ContactTracingViewer.pdb
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\bin\Debug\ContactTracingViewer.xml
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.exe
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.xml
+C:\Users\Jv Cataquiz\source\repos\Vbnet\Assignment3\ContactTracingViewer\ContactTracingViewer\obj\Debug\ContactTracingViewer.pdb
