@@ -30,6 +30,7 @@ Partial Class ContactTracingViewer
         Me.LabelDate = New System.Windows.Forms.Label()
         Me.LabelError = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.LabelTime = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ButtonSearch
@@ -70,7 +71,7 @@ Partial Class ContactTracingViewer
         'LabelDate
         '
         Me.LabelDate.AutoSize = True
-        Me.LabelDate.Location = New System.Drawing.Point(359, 20)
+        Me.LabelDate.Location = New System.Drawing.Point(12, 9)
         Me.LabelDate.Name = "LabelDate"
         Me.LabelDate.Size = New System.Drawing.Size(30, 13)
         Me.LabelDate.TabIndex = 4
@@ -92,11 +93,21 @@ Partial Class ContactTracingViewer
         '
         Me.Timer1.Enabled = True
         '
+        'LabelTime
+        '
+        Me.LabelTime.AutoSize = True
+        Me.LabelTime.Location = New System.Drawing.Point(355, 9)
+        Me.LabelTime.Name = "LabelTime"
+        Me.LabelTime.Size = New System.Drawing.Size(30, 13)
+        Me.LabelTime.TabIndex = 6
+        Me.LabelTime.Text = "Time"
+        '
         'ContactTracingViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(416, 202)
+        Me.Controls.Add(Me.LabelTime)
         Me.Controls.Add(Me.LabelError)
         Me.Controls.Add(Me.LabelDate)
         Me.Controls.Add(Me.LabelFullname)
@@ -118,4 +129,5 @@ Partial Class ContactTracingViewer
     Friend WithEvents LabelDate As Label
     Friend WithEvents LabelError As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents LabelTime As Label
 End Class
