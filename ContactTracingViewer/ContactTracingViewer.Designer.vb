@@ -23,6 +23,7 @@ Partial Class ContactTracingViewer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ContactTracingViewer))
         Me.ButtonOpen = New System.Windows.Forms.Button()
         Me.ButtonAdmin = New System.Windows.Forms.Button()
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
@@ -33,12 +34,12 @@ Partial Class ContactTracingViewer
         Me.LabelTime = New System.Windows.Forms.Label()
         Me.LabelNAME = New System.Windows.Forms.Label()
         Me.PanelAdmin = New System.Windows.Forms.Panel()
-        Me.LabelUsername = New System.Windows.Forms.Label()
-        Me.LabelPassword = New System.Windows.Forms.Label()
-        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
-        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
-        Me.ButtonLogin = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ButtonLogin = New System.Windows.Forms.Button()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
+        Me.LabelPassword = New System.Windows.Forms.Label()
+        Me.LabelUsername = New System.Windows.Forms.Label()
         Me.RichTextBoxDisplay = New System.Windows.Forms.RichTextBox()
         Me.PanelAdmin.SuspendLayout()
         Me.SuspendLayout()
@@ -160,39 +161,16 @@ Partial Class ContactTracingViewer
         Me.PanelAdmin.TabIndex = 8
         Me.PanelAdmin.Visible = False
         '
-        'LabelUsername
+        'Label1
         '
-        Me.LabelUsername.AutoSize = True
-        Me.LabelUsername.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelUsername.Location = New System.Drawing.Point(20, 16)
-        Me.LabelUsername.Name = "LabelUsername"
-        Me.LabelUsername.Size = New System.Drawing.Size(58, 13)
-        Me.LabelUsername.TabIndex = 0
-        Me.LabelUsername.Text = "Username:"
-        '
-        'LabelPassword
-        '
-        Me.LabelPassword.AutoSize = True
-        Me.LabelPassword.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelPassword.Location = New System.Drawing.Point(23, 58)
-        Me.LabelPassword.Name = "LabelPassword"
-        Me.LabelPassword.Size = New System.Drawing.Size(56, 13)
-        Me.LabelPassword.TabIndex = 1
-        Me.LabelPassword.Text = "Password:"
-        '
-        'TextBoxUsername
-        '
-        Me.TextBoxUsername.Location = New System.Drawing.Point(80, 33)
-        Me.TextBoxUsername.Name = "TextBoxUsername"
-        Me.TextBoxUsername.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxUsername.TabIndex = 2
-        '
-        'TextBoxPassword
-        '
-        Me.TextBoxPassword.Location = New System.Drawing.Point(80, 76)
-        Me.TextBoxPassword.Name = "TextBoxPassword"
-        Me.TextBoxPassword.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxPassword.TabIndex = 3
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Silver
+        Me.Label1.Location = New System.Drawing.Point(295, 5)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(47, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "ADMIN"
         '
         'ButtonLogin
         '
@@ -208,16 +186,39 @@ Partial Class ContactTracingViewer
         Me.ButtonLogin.Text = "Login"
         Me.ButtonLogin.UseVisualStyleBackColor = False
         '
-        'Label1
+        'TextBoxPassword
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(295, 5)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(47, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "ADMIN"
+        Me.TextBoxPassword.Location = New System.Drawing.Point(80, 76)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxPassword.TabIndex = 3
+        '
+        'TextBoxUsername
+        '
+        Me.TextBoxUsername.Location = New System.Drawing.Point(80, 33)
+        Me.TextBoxUsername.Name = "TextBoxUsername"
+        Me.TextBoxUsername.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxUsername.TabIndex = 2
+        '
+        'LabelPassword
+        '
+        Me.LabelPassword.AutoSize = True
+        Me.LabelPassword.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelPassword.Location = New System.Drawing.Point(23, 58)
+        Me.LabelPassword.Name = "LabelPassword"
+        Me.LabelPassword.Size = New System.Drawing.Size(56, 13)
+        Me.LabelPassword.TabIndex = 1
+        Me.LabelPassword.Text = "Password:"
+        '
+        'LabelUsername
+        '
+        Me.LabelUsername.AutoSize = True
+        Me.LabelUsername.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelUsername.Location = New System.Drawing.Point(20, 16)
+        Me.LabelUsername.Name = "LabelUsername"
+        Me.LabelUsername.Size = New System.Drawing.Size(58, 13)
+        Me.LabelUsername.TabIndex = 0
+        Me.LabelUsername.Text = "Username:"
         '
         'RichTextBoxDisplay
         '
@@ -247,6 +248,7 @@ Partial Class ContactTracingViewer
         Me.Controls.Add(Me.ButtonAdmin)
         Me.Controls.Add(Me.ButtonOpen)
         Me.Controls.Add(Me.RichTextBoxDisplay)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "ContactTracingViewer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

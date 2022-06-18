@@ -12,7 +12,6 @@
             If checker.Contains(TextBoxSearch.Text) And checker.Equals("Fullname:  " & TextBoxSearch.Text) Then
                 LabelError.Text = "DATA FOUND!!"
                 LabelError.ForeColor = System.Drawing.Color.Green
-
                 checker &= vbCrLf & filereader.ReadLine()
                 checker &= vbCrLf & filereader.ReadLine()
                 checker &= vbCrLf & filereader.ReadLine()
