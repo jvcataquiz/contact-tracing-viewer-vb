@@ -32,6 +32,7 @@ Partial Class Admin
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.RichTextBoxDisplayAll = New System.Windows.Forms.RichTextBox()
         Me.TimerAdmin = New System.Windows.Forms.Timer(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -45,7 +46,7 @@ Partial Class Admin
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(478, 302)
+        Me.TabControl1.Size = New System.Drawing.Size(480, 302)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -59,7 +60,7 @@ Partial Class Admin
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(470, 276)
+        Me.TabPage1.Size = New System.Drawing.Size(472, 276)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Search"
         '
@@ -107,7 +108,7 @@ Partial Class Admin
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(470, 276)
+        Me.TabPage2.Size = New System.Drawing.Size(472, 276)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "All Data"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -117,7 +118,7 @@ Partial Class Admin
         Me.RichTextBoxDisplayAll.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBoxDisplayAll.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBoxDisplayAll.Name = "RichTextBoxDisplayAll"
-        Me.RichTextBoxDisplayAll.Size = New System.Drawing.Size(464, 270)
+        Me.RichTextBoxDisplayAll.Size = New System.Drawing.Size(466, 270)
         Me.RichTextBoxDisplayAll.TabIndex = 0
         Me.RichTextBoxDisplayAll.Text = ""
         '
@@ -125,11 +126,25 @@ Partial Class Admin
         '
         Me.TimerAdmin.Enabled = True
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.Yellow
+        Me.Button1.Location = New System.Drawing.Point(409, 304)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(59, 24)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "BACK"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(478, 300)
+        Me.ClientSize = New System.Drawing.Size(480, 332)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl1)
         Me.MaximizeBox = False
         Me.Name = "Admin"
@@ -152,4 +167,5 @@ Partial Class Admin
     Friend WithEvents LabelError As Label
     Friend WithEvents TimerAdmin As Timer
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class
