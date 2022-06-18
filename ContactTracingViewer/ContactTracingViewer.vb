@@ -30,6 +30,7 @@ Public Class ContactTracingViewer
                 LabelError.ForeColor = System.Drawing.Color.Green
             End If
         End While
+
     End Sub
     Sub mybtn()
         If LabelError.Text.Equals("DATA FOUND!!") Then
