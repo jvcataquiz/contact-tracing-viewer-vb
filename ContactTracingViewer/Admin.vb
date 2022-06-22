@@ -16,14 +16,14 @@
             LabelError.Text = "No Data Found!!!"
             RichTextBoxAdminDisplay.Text = ""
         End If
-
+        Dim list As New List(Of String)
 
         filereader = My.Computer.FileSystem.OpenTextFileReader("contacttracing.txt")
         While Not filereader.EndOfStream
             checker = filereader.ReadLine()
 
 
-            If checker.Contains(TextBoxSearch.Text) And checker.Equals(myval & TextBoxSearch.Text) Then
+            If checker.Contains(myval & TextBoxSearch.Text) Then
                 LabelError.Text = "DATA FOUND!!"
                 LabelError.ForeColor = System.Drawing.Color.Green
                 checker &= vbCrLf & filereader.ReadLine()
@@ -35,9 +35,13 @@
                 checker &= vbCrLf & filereader.ReadLine()
                 checker &= vbCrLf & filereader.ReadLine()
                 checker &= vbCrLf & filereader.ReadLine()
-                checker &= vbCrLf & filereader.ReadLine()
-                RichTextBoxAdminDisplay.Text = checker
-                End If
+                checker &= vbCrLf & filereader.ReadLine() & vbCrLf
+
+                list.Add(checker)
+                    RichTextBoxAdminDisplay.Lines = list.ToArray()
+                TimerAdmin.Stop()
+
+            End If
 
         End While
     End Sub
@@ -59,8 +63,6 @@
 
     Private Sub Admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ComboBoxFilter.Text = "By Name"
-        filereaderall = My.Computer.FileSystem.OpenTextFileReader("contacttracing.txt")
-        RichTextBoxDisplayAll.Text = filereaderall.ReadToEnd()
 
     End Sub
 
@@ -70,6 +72,11 @@
         Me.Hide()
     End Sub
 
+    Private Sub TextBoxSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
+        TimerAdmin.Start()
+    End Sub
 
-
+    Private Sub ComboBoxFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxFilter.SelectedIndexChanged
+        TimerAdmin.Start()
+    End Sub
 End Class

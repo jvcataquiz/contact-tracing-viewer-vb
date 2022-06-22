@@ -31,19 +31,15 @@ Partial Class Admin
         Me.LabelError = New System.Windows.Forms.Label()
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.RichTextBoxAdminDisplay = New System.Windows.Forms.RichTextBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.RichTextBoxDisplayAll = New System.Windows.Forms.RichTextBox()
         Me.TimerAdmin = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
@@ -113,26 +109,6 @@ Partial Class Admin
         Me.RichTextBoxAdminDisplay.TabIndex = 5
         Me.RichTextBoxAdminDisplay.Text = ""
         '
-        'TabPage2
-        '
-        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.RichTextBoxDisplayAll)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(472, 276)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "All Data"
-        '
-        'RichTextBoxDisplayAll
-        '
-        Me.RichTextBoxDisplayAll.Location = New System.Drawing.Point(0, 0)
-        Me.RichTextBoxDisplayAll.Name = "RichTextBoxDisplayAll"
-        Me.RichTextBoxDisplayAll.ReadOnly = True
-        Me.RichTextBoxDisplayAll.Size = New System.Drawing.Size(472, 276)
-        Me.RichTextBoxDisplayAll.TabIndex = 0
-        Me.RichTextBoxDisplayAll.Text = ""
-        '
         'TimerAdmin
         '
         Me.TimerAdmin.Enabled = True
@@ -166,7 +142,6 @@ Partial Class Admin
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -179,7 +154,5 @@ Partial Class Admin
     Friend WithEvents TimerAdmin As Timer
     Friend WithEvents LabelNameandDate As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents RichTextBoxDisplayAll As RichTextBox
     Friend WithEvents ComboBoxFilter As ComboBox
 End Class

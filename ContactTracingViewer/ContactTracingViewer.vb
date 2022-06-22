@@ -23,7 +23,6 @@ Public Class ContactTracingViewer
     End Sub
     Public Sub MyData()
 
-        Dim datestring As String
         filereader = My.Computer.FileSystem.OpenTextFileReader("contacttracing.txt")
         While Not filereader.EndOfStream
             checker = filereader.ReadLine()
@@ -41,6 +40,8 @@ Public Class ContactTracingViewer
                 checker &= vbCrLf & filereader.ReadLine()
                 checker &= vbCrLf & filereader.ReadLine()
                 checker &= vbCrLf & filereader.ReadLine()
+
+
                 RichTextBoxDisplay.Text = checker
             End If
         End While
