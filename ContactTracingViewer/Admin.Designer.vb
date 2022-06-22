@@ -26,7 +26,8 @@ Partial Class Admin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Admin))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBoxFilter = New System.Windows.Forms.ComboBox()
+        Me.LabelNameandDate = New System.Windows.Forms.Label()
         Me.LabelError = New System.Windows.Forms.Label()
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.RichTextBoxAdminDisplay = New System.Windows.Forms.RichTextBox()
@@ -53,7 +54,8 @@ Partial Class Admin
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.ComboBoxFilter)
+        Me.TabPage1.Controls.Add(Me.LabelNameandDate)
         Me.TabPage1.Controls.Add(Me.LabelError)
         Me.TabPage1.Controls.Add(Me.TextBoxSearch)
         Me.TabPage1.Controls.Add(Me.RichTextBoxAdminDisplay)
@@ -65,16 +67,25 @@ Partial Class Admin
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Search"
         '
-        'Label1
+        'ComboBoxFilter
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(12, 204)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(263, 16)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "FULLNAME: (LASTNAME, FIRSTNAME MI.)"
+        Me.ComboBoxFilter.FormattingEnabled = True
+        Me.ComboBoxFilter.Items.AddRange(New Object() {"By Name", "By Date"})
+        Me.ComboBoxFilter.Location = New System.Drawing.Point(386, 12)
+        Me.ComboBoxFilter.Name = "ComboBoxFilter"
+        Me.ComboBoxFilter.Size = New System.Drawing.Size(78, 21)
+        Me.ComboBoxFilter.TabIndex = 6
+        '
+        'LabelNameandDate
+        '
+        Me.LabelNameandDate.AutoSize = True
+        Me.LabelNameandDate.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNameandDate.ForeColor = System.Drawing.Color.White
+        Me.LabelNameandDate.Location = New System.Drawing.Point(12, 204)
+        Me.LabelNameandDate.Name = "LabelNameandDate"
+        Me.LabelNameandDate.Size = New System.Drawing.Size(263, 16)
+        Me.LabelNameandDate.TabIndex = 5
+        Me.LabelNameandDate.Text = "FULLNAME: (LASTNAME, FIRSTNAME MI.)"
         '
         'LabelError
         '
@@ -88,7 +99,6 @@ Partial Class Admin
         '
         'TextBoxSearch
         '
-        Me.TextBoxSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBoxSearch.Location = New System.Drawing.Point(12, 224)
         Me.TextBoxSearch.Name = "TextBoxSearch"
         Me.TextBoxSearch.Size = New System.Drawing.Size(436, 20)
@@ -99,12 +109,13 @@ Partial Class Admin
         Me.RichTextBoxAdminDisplay.Location = New System.Drawing.Point(11, 12)
         Me.RichTextBoxAdminDisplay.Name = "RichTextBoxAdminDisplay"
         Me.RichTextBoxAdminDisplay.ReadOnly = True
-        Me.RichTextBoxAdminDisplay.Size = New System.Drawing.Size(436, 170)
+        Me.RichTextBoxAdminDisplay.Size = New System.Drawing.Size(359, 170)
         Me.RichTextBoxAdminDisplay.TabIndex = 5
         Me.RichTextBoxAdminDisplay.Text = ""
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.TabPage2.Controls.Add(Me.RichTextBoxDisplayAll)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
@@ -112,14 +123,13 @@ Partial Class Admin
         Me.TabPage2.Size = New System.Drawing.Size(472, 276)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "All Data"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'RichTextBoxDisplayAll
         '
-        Me.RichTextBoxDisplayAll.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBoxDisplayAll.Location = New System.Drawing.Point(3, 3)
+        Me.RichTextBoxDisplayAll.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBoxDisplayAll.Name = "RichTextBoxDisplayAll"
-        Me.RichTextBoxDisplayAll.Size = New System.Drawing.Size(466, 270)
+        Me.RichTextBoxDisplayAll.ReadOnly = True
+        Me.RichTextBoxDisplayAll.Size = New System.Drawing.Size(472, 276)
         Me.RichTextBoxDisplayAll.TabIndex = 0
         Me.RichTextBoxDisplayAll.Text = ""
         '
@@ -147,6 +157,7 @@ Partial Class Admin
         Me.ClientSize = New System.Drawing.Size(480, 332)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Admin"
@@ -164,10 +175,11 @@ Partial Class Admin
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TextBoxSearch As TextBox
     Friend WithEvents RichTextBoxAdminDisplay As RichTextBox
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents RichTextBoxDisplayAll As RichTextBox
     Friend WithEvents LabelError As Label
     Friend WithEvents TimerAdmin As Timer
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LabelNameandDate As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents RichTextBoxDisplayAll As RichTextBox
+    Friend WithEvents ComboBoxFilter As ComboBox
 End Class

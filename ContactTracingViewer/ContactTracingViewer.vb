@@ -22,6 +22,8 @@ Public Class ContactTracingViewer
         mybtn()
     End Sub
     Public Sub MyData()
+
+        Dim datestring As String
         filereader = My.Computer.FileSystem.OpenTextFileReader("contacttracing.txt")
         While Not filereader.EndOfStream
             checker = filereader.ReadLine()
